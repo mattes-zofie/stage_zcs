@@ -16,7 +16,7 @@
         </style>
 <script>
     function mostraDati() {
-        // Recupera i dati da localStorage
+        
         var nome = localStorage.getItem('nome');
         var cognome = localStorage.getItem('cognome');
         
@@ -43,9 +43,36 @@
         var giorno3_4 = localStorage.getItem('giorno3_4');
         var giorno4_4 = localStorage.getItem('giorno4_4');
         var giorno5_4 = localStorage.getItem('giorno5_4');
+
+        
    
         // Mostra i dati sulla pagina
         document.getElementById('risultato').innerText = `Utente: ${nome} ${cognome}`;
+
+document.getElementById('giorno1').innerText = `${giorno1}`;
+document.getElementById('giorno2').innerText = `${giorno2}`;
+document.getElementById('giorno3').innerText = `${giorno3}`;
+document.getElementById('giorno4').innerText = `${giorno4}`;
+document.getElementById('giorno5').innerText = `${giorno5}`;
+
+document.getElementById('giorno1_2').innerText = `${giorno1_2}`;
+document.getElementById('giorno2_2').innerText = `${giorno2_2}`;
+document.getElementById('giorno3_2').innerText = `${giorno3_2}`;
+document.getElementById('giorno4_2').innerText = `${giorno4_2}`;
+document.getElementById('giorno5_2').innerText = `${giorno5_2}`;
+
+document.getElementById('giorno1_3').innerText = `${giorno1_3}`;
+document.getElementById('giorno2_3').innerText = `${giorno2_3}`;
+document.getElementById('giorno3_3').innerText = `${giorno3_3}`;
+document.getElementById('giorno4_3').innerText = `${giorno4_3}`;
+document.getElementById('giorno5_3').innerText = `${giorno5_3}`;
+
+document.getElementById('giorno1_4').innerText = `${giorno1_4}`;
+document.getElementById('giorno2_4').innerText = `${giorno2_4}`;
+document.getElementById('giorno3_4').innerText = `${giorno3_4}`;
+document.getElementById('giorno4_4').innerText = `${giorno4_4}`;
+document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
+
     }
 </script>
 </head>
@@ -159,10 +186,10 @@
     <th>Venerdì</th>
     </tr>
     <th>mattina</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><p id="giorno1"></p></td>
+    <td><p id="giorno2"></p></td>
+    <td><p id="giorno3"></p></td>
+    <td><p id="giorno4"></p></td>
     <td></td>
     </tr>
     <th>pomeriggio</th>
