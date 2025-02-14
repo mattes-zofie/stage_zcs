@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheda stage</title>
     <link rel="stylesheet" href="style.css">
+    <style> 
+    table {
+    width: 90%; /* Imposta la larghezza della tabella */
+    height: 25%;
+    margin: 0 auto; /* Centra la tabella orizzontalmente */
+    border: 3px solid black;
+    padding: 20px;
+}
+        </style>
 <script>
     function mostraDati() {
         // Recupera i dati da localStorage
@@ -169,9 +178,9 @@
         // Esegui la funzione per mostrare i dati
         mostraDati();
     </script>
-    
+
     <button class="tab-button" onclick="showTab('feedback')">feedback</button>
-    
+
     
     <div id="feedback" class="tab-content">
 
