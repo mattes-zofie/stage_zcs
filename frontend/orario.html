@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheda stage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheda stage</title>
+    
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -73,10 +74,11 @@
 
     </style>
 </head>
-<body>
-    <h1>Inserisci l'orario della tua settimana durante lo stage</h1>
 
-    <!-- Tabella per visualizzare i giorni della settimana e gli orari -->
+<body>
+  <h1>Inserisci l'orario della tua settimana durante lo stage</h1>
+
+<!-- Tabella per visualizzare i giorni della settimana e gli orari -->
     <table>
         <thead>
             <tr>
@@ -87,6 +89,7 @@
                 <th>Uscita</th>
             </tr>
         </thead>
+        
         <tbody id="timeTableBody">
             <tr>
                 <td>Lunedì</td>
@@ -126,11 +129,11 @@
         </tbody>
     </table>
 
-    <!-- Bottone per aggiungere i dati -->
+<!-- Bottone per aggiungere i dati -->
     <button class="tab-button" type="button" onclick="addTimes()">Salva Orari</button>
 
     <script>
-        // Funzione per raccogliere e visualizzare i dati degli orari
+// Funzione per raccogliere e visualizzare i dati degli orari
         function addTimes() {
             let times = {
                 "Lunedì": {
@@ -169,9 +172,11 @@
             alert("Orari salvati con successo!");
         }
     </script>
+    
     <a href="./registrator.html">
         <button class="tab-button" onclick="showtab('avanti')">avanti</button>
-        </a>
+    </a>
+
 </body>
 </html>
 
