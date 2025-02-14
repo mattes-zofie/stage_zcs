@@ -14,13 +14,13 @@ public class Webserver {
     public static void main(String[] args) throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        // home
+        // Home
         server.createContext("/", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String html = new String(Files.readAllBytes(Paths.get("zcs.html")));
+                String html = new String(Files.readAllBytes(Paths.get("home.html")));
 
-                exchange.getResponseHeaders().add("Content-Type", "text/html ; charset=UTF-8");
+                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
 
                 exchange.sendResponseHeaders(200, html.getBytes().length);
 
@@ -29,13 +29,14 @@ public class Webserver {
                 os.close();
             }
         });
-        //orari
-        server.createContext("/", new HttpHandler() {
+
+        // Orari
+        server.createContext("/orari", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String html = new String(Files.readAllBytes(Paths.get("zcs_orari.html")));
+                String html = new String(Files.readAllBytes(Paths.get("orari.html")));
 
-                exchange.getResponseHeaders().add("Content-Type", "text/html ; charset=UTF-8");
+                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
 
                 exchange.sendResponseHeaders(200, html.getBytes().length);
 
@@ -44,13 +45,14 @@ public class Webserver {
                 os.close();
             }
         });
-        //stage
-        server.createContext("/", new HttpHandler() {
+
+        // Registrator
+        server.createContext("/registrator", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String html = new String(Files.readAllBytes(Paths.get("zcs_stage.html")));
+                String html = new String(Files.readAllBytes(Paths.get("registrator.html")));
 
-                exchange.getResponseHeaders().add("Content-Type", "text/html ; charset=UTF-8");
+                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
 
                 exchange.sendResponseHeaders(200, html.getBytes().length);
 
@@ -66,7 +68,7 @@ public class Webserver {
             public void handle(HttpExchange exchange) throws IOException {
                 String css = new String(Files.readAllBytes(Paths.get("style.css")));
 
-                exchange.getResponseHeaders().add("Content-Type", "text/css ; charset=UTF-8");
+                exchange.getResponseHeaders().add("Content-Type", "text/css; charset=UTF-8");
 
                 exchange.sendResponseHeaders(200, css.getBytes().length);
 
