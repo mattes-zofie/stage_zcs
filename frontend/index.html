@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Home Page</title>
-        <style>
-            
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Home Page</title>
+        
+    <style>  
         button{
             margin: auto;
         }
-        </style>
+    </style>
+
     <script>
-        function salvaDati() {
-            var nome = document.getElementById("nome").value;
-            var cognome = document.getElementById("cognome").value;
+      function salvaDati() {
+         var nome = document.getElementById("nome").value;
+         var cognome = document.getElementById("cognome").value;
             
-            // Salva i dati in localStorage
-            localStorage.setItem("nome", nome);
-            localStorage.setItem("cognome", cognome);
+          // Salva i dati in localStorage
+          localStorage.setItem("nome", nome);
+          localStorage.setItem("cognome", cognome);
             
-            // Redireziona alla pagina successiva dopo il salvataggio
-            window.location.href = "./orario.html";
+          // Redireziona alla pagina successiva dopo il salvataggio
+          window.location.href = "./orario.html";
         }
     </script>
-</head>
-<body>
-    <header>
-        <h1>HOME</h1>
-    </header>
-    
-    <br><br>
 
-    <h2 style="text-align: center; color: rgb(200, 64, 200);">
+</head>
+
+<body>
+  <header>
+     <h1>HOME</h1>
+  </header>
+  
+  <br><br>
+
+  <h2 style="text-align: center; color: rgb(200, 64, 200);">
         Inserisci i tuoi dati, in seguito compila le tabelle. <br>
         Una volta finito riceverai un resoconto scaricabile con le informazioni relative al tuo stage!
-    </h2>
+  </h2>
 
-    <!-- Correzione della tabella -->
+            <!-- Correzione della tabella -->
     <table>
-        <tr>
-            <th style="background-color: white;">Dati Stagista</th>
-        </tr>
-        
-        <tr>
-            <td>
-                <!-- Correzione dei form -->
-                <form action="processa.php" method="post">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
+      <tr>
+         <th style="background-color: white;">Dati Stagista</th>
+      </tr>     
+      <tr>
+         <td>
+             <!-- Correzione dei form -->
+             <form action="processa.php" method="post">
+             <div class="form-group">
+             <label for="nome">Nome:</label>
+             <input type="text" id="nome" name="nome" required>
+             </div>
 
-                    <div class="form-group">
-                        <label for="cognome">Cognome:</label>
-                        <input type="text" id="cognome" name="cognome" required>
-                    </div>
+             <div class="form-group">
+             <label for="cognome">Cognome:</label>
+             <input type="text" id="cognome" name="cognome" required>
+             </div>
 
-                    <!-- Aggiungi la classe 'tab-button' al pulsante -->
-                    <button type="button" class="tab-button" onclick="salvaDati()" ondblclick="showtab('Invia')">Invia</button>
-                </form>
-            </td>
+             <!-- Aggiungi la classe 'tab-button' al pulsante -->
+             <button type="button" class="tab-button" onclick="salvaDati()" ondblclick="showtab('Invia')">Invia</button>
+             </form>
+          </td>
         </tr>
     </table>
 
