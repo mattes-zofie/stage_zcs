@@ -5,11 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheda stage</title>
     <link rel="stylesheet" href="style.css">
+    <style> 
+    table {
+    width: 90%; /* Imposta la larghezza della tabella */
+    height: 25%;
+    margin: 0 auto; /* Centra la tabella orizzontalmente */
+    border: 3px solid black;
+    padding: 20px;
+}
+        </style>
 <script>
     function mostraDati() {
         // Recupera i dati da localStorage
         var nome = localStorage.getItem('nome');
         var cognome = localStorage.getItem('cognome');
+        
+        var giorno1 = localStorage.getItem('giorno1');
+        var giorno2 = localStorage.getItem('giorno2');
+        var giorno3 = localStorage.getItem('giorno3');
+        var giorno4 = localStorage.getItem('giorno4');
+        var giorno5 = localStorage.getItem('giorno5');
+        
+        var giorno1_2 = localStorage.getItem('giorno1_2');
+        var giorno2_2 = localStorage.getItem('giorno2_2');
+        var giorno3_2 = localStorage.getItem('giorno3_2');
+        var giorno4_2 = localStorage.getItem('giorno4_2');
+        var giorno5_2 = localStorage.getItem('giorno5_2');
+        
+        var giorno1 = localStorage.getItem('giorno1');
+        var giorno2 = localStorage.getItem('giorno2');
+        var giorno3 = localStorage.getItem('giorno3');
+        var giorno4 = localStorage.getItem('giorno4');
+        var giorno5 = localStorage.getItem('giorno5');
+        
+        var giorno1 = localStorage.getItem('giorno1');
+        var giorno2 = localStorage.getItem('giorno2');
+        var giorno3 = localStorage.getItem('giorno3');
+        var giorno4 = localStorage.getItem('giorno4');
+        var giorno5 = localStorage.getItem('giorno5');
+        
+        var giorno1 = localStorage.getItem('giorno1');
+        var giorno2 = localStorage.getItem('giorno2');
+        var giorno3 = localStorage.getItem('giorno3');
+        var giorno4 = localStorage.getItem('giorno4');
+        var giorno5 = localStorage.getItem('giorno5');
         
         // Mostra i dati sulla pagina
         document.getElementById('risultato').innerText = `Utente: ${nome} ${cognome}`;
@@ -54,11 +93,11 @@
                 </tr>
                 <tr>
                     <td>pomeriggio</td>
-            <td><input type="text" name="giorno1.2" placeholder="Inserisci attività"></td>
-     <td><input type="text" name="giorno2.2" placeholder="Inserisci attività"></td>      
-       <td><input type="text" name="giorno3.2" placeholder="Inserisci attività"></td>
-          <td><input type="text" name="giorno4.2" placeholder="Inserisci attività"></td>
-           <td><input type="text" name="giorno5." placeholder="Inserisci attività"></td>
+            <td><input type="text" name="giorno1_2" placeholder="Inserisci attività"></td>
+     <td><input type="text" name="giorno2_2" placeholder="Inserisci attività"></td>      
+       <td><input type="text" name="giorno3_2" placeholder="Inserisci attività"></td>
+          <td><input type="text" name="giorno4_2" placeholder="Inserisci attività"></td>
+           <td><input type="text" name="giorno5_2" placeholder="Inserisci attività"></td>
                                                   
                 </tr>
         </tbody>
@@ -81,19 +120,19 @@
     <tbody>
         <tr>
             <td>mattina</td>
-                   <td><input type="text" name="giorno1.3" placeholder="Inserisci attività"></td>
-                 <td><input type="text" name="giorno2.3" placeholder="Inserisci attività"></td>
-                <td><input type="text" name="giorno3.3" placeholder="Inserisci attività"></td>
-     <td><input type="text" name="giorno4.3" placeholder="Inserisci attività"></td>
- <td><input type="text" name="giorno5.3" placeholder="Inserisci attività"></td>
+                   <td><input type="text" name="giorno1_3" placeholder="Inserisci attività"></td>
+                 <td><input type="text" name="giorno2_3" placeholder="Inserisci attività"></td>
+                <td><input type="text" name="giorno3_3" placeholder="Inserisci attività"></td>
+     <td><input type="text" name="giorno4_3" placeholder="Inserisci attività"></td>
+ <td><input type="text" name="giorno5_3" placeholder="Inserisci attività"></td>
         </tr>
         <tr>
             <td>pomeriggio</td>
-    <td><input type="text" name="giorno1.1" placeholder="Inserisci attività"></td>
-<td><input type="text" name="giorno2.1" placeholder="Inserisci attività"></td>      
-<td><input type="text" name="giorno3.1" placeholder="Inserisci attività"></td>
-  <td><input type="text" name="giorno4.1" placeholder="Inserisci attività"></td>
-   <td><input type="text" name="giorno5.1" placeholder="Inserisci attività"></td>
+    <td><input type="text" name="giorno1_4" placeholder="Inserisci attività"></td>
+<td><input type="text" name="giorno2_4" placeholder="Inserisci attività"></td>      
+<td><input type="text" name="giorno3_4" placeholder="Inserisci attività"></td>
+  <td><input type="text" name="giorno4_4" placeholder="Inserisci attività"></td>
+   <td><input type="text" name="giorno5_4" placeholder="Inserisci attività"></td>
                                           
         </tr>
         </tbody>
