@@ -1,0 +1,72 @@
+
+header{
+    background-color: rgb(139, 139, 139);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 20px;
+    }
+    body{
+    background-image:url(https://www.pbitech.it/wp-content/uploads/2024/08/zucchetti.png);
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur(0.5px);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    h1 {
+    font-size: 300%;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    }
+
+    h3{
+    font-weight: bold;
+    color: #ff8e00;
+    font-size: 150%;
+    padding: 15px;
+    }
+
+    table{
+    position: relative;
+    top: 150px;
+    bottom: 210px;
+    background-color: white;
+    width: 500px;
+    height: 275px;
+    padding: auto;
+    margin: auto;
+    border-collapse: collapse;
+    }
+
+    td {
+    color: black;
+    width: 30px;
+    border: 2px solid black;
+    padding: auto px;
+    margin: auto;
+    text-align: center;
+    }
+
+    th {
+    background-color: white;
+    color: red;
+    width: 30px;
+    border: 3px solid black;
+    font-size: 100%;
+    padding: auto px;
+    margin: auto;
+    text-align: center;
+    }
+
+    p{
+    color:white;
+    font-size: 120%;
+    padding-left: 15px;
+    margin-left: auto
+    }

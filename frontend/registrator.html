@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheda stage</title>
+    <link rel="stylesheet" href="style.css">
+<script>
+    function mostraDati() {
+        // Recupera i dati da localStorage
+        var nome = localStorage.getItem('nome');
+        var cognome = localStorage.getItem('cognome');
+        
+        // Mostra i dati sulla pagina
+        document.getElementById('risultato').innerText = `Utente: ${nome} ${cognome}`;
+    }
+</script>
+</head>
+<body>
+    
+    <h1>Tabella attività</h1>
+    <p  id="risultato"></p>
+
+    
+   
+
+    <!-- Bottoni per cambiare le schede -->
+    <button class="tab-button" onclick="showTab('tab1')">Prima settimana</button>
+    <button class="tab-button" onclick="showTab('tab2')">Seconda settimana</button>
+
+
+    <!-- Contenuto delle schede -->
+    <div id="tab1" class="tab-content">
+        <h2>10/02/25-14/02/25</h2>
+        <table>
+        <thead>
+           <tr>
+                        <th>giorno</th>
+                        <th>lunedì</th>
+                        <th>martedì</th>
+                        <th>mercoledì</th>
+                        <th>giovedì</th>
+                        <th>venerdì</th>
+                    </tr>
+                </thead>  
+            <tbody>
+                <tr>
+                    <td>mattina</td>
+                           <td><input type="text" name="giorno1" placeholder="Inserisci attività"></td>
+                         <td><input type="text" name="giorno2" placeholder="Inserisci attività"></td>
+                        <td><input type="text" name="giorno3" placeholder="Inserisci attività"></td>
+             <td><input type="text" name="giorno4" placeholder="Inserisci attività"></td>
+         <td><input type="text" name="giorno5" placeholder="Inserisci attività"></td>
+                </tr>
+                <tr>
+                    <td>pomeriggio</td>
+            <td><input type="text" name="giorno1.2" placeholder="Inserisci attività"></td>
+     <td><input type="text" name="giorno2.2" placeholder="Inserisci attività"></td>      
+       <td><input type="text" name="giorno3.2" placeholder="Inserisci attività"></td>
+          <td><input type="text" name="giorno4.2" placeholder="Inserisci attività"></td>
+           <td><input type="text" name="giorno5." placeholder="Inserisci attività"></td>
+                                                  
+                </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>17/02/25-22/02/25</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>giorno</th>
+                <th>lunedì</th>
+                <th>martedì</th>
+                <th>mercoledì</th>
+                <th>giovedì</th>
+                <th>venerdì</th>
+            </tr>
+        </thead>  
+    <tbody>
+        <tr>
+            <td>mattina</td>
+                   <td><input type="text" name="giorno1.3" placeholder="Inserisci attività"></td>
+                 <td><input type="text" name="giorno2.3" placeholder="Inserisci attività"></td>
+                <td><input type="text" name="giorno3.3" placeholder="Inserisci attività"></td>
+     <td><input type="text" name="giorno4.3" placeholder="Inserisci attività"></td>
+ <td><input type="text" name="giorno5.3" placeholder="Inserisci attività"></td>
+        </tr>
+        <tr>
+            <td>pomeriggio</td>
+    <td><input type="text" name="giorno1.1" placeholder="Inserisci attività"></td>
+<td><input type="text" name="giorno2.1" placeholder="Inserisci attività"></td>      
+<td><input type="text" name="giorno3.1" placeholder="Inserisci attività"></td>
+  <td><input type="text" name="giorno4.1" placeholder="Inserisci attività"></td>
+   <td><input type="text" name="giorno5.1" placeholder="Inserisci attività"></td>
+                                          
+        </tr>
+        </tbody>
+    </table>
+    
+    <button class="tab-button" onclick="showTab('carica')">carica</button>
+    
+    </div>
+    </div>
+    
+</div></div>
+</div>
+    
+    <div id="carica" class="tab-content">
+        
+
+    <a href="file:///C:/Users/stage/Desktop/home.html">
+    <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
+    </a>
+
+    
+<table>
+    <br>
+    <tr>
+    <th style="background-color: white;">settimana 1</th>
+    <th>Lunedì</th>
+    <th>Martedì</th>
+    <th>Mercoledì</th>
+    <th>Giovedì</th>
+    <th>Venerdì</th>
+    </tr>
+    <th>mattina</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <th>pomeriggio</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+</table>
+    <br>
+    <table>
+        <tr>
+        <th style="background-color: white;">settimana 2</th>
+        <th>Lunedì</th>
+        <th>Martedì</th>
+        <th>Mercoledì</th>
+        <th>Giovedì</th>
+        <th>Venerdì</th>
+        </tr>
+        <th>mattina</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <th>pomeriggio</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+    </table>
+    <script>
+        // Esegui la funzione per mostrare i dati
+        mostraDati();
+    </script>
+    
+    <button class="tab-button" onclick="showTab('feedback')">feedback</button>
+    
+    
+    <div id="feedback" class="tab-content">
+
+    <h1>Feedback sul Lavoro</h1>
+    
+    <!-- Tabella di feedback sul lavoro -->
+    <h2>Inserisci il tuo feedback</h2>
+    <form id="feedbackForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Risposta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valutazione del lavoro (1-5)</td>
+                    <td>
+                        <select id="workRating" name="workRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Commenti aggiuntivi</td>
+                    <td><textarea id="workComments" name="workComments" rows="4" cols="50"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bottone per inviare il feedback -->
+        <button class="tab-button" type="button" onclick="submitFeedback()">Invia Feedback</button>
+    </form>
+</div></div>
+    <script>
+        // Funzione per raccogliere e inviare il feedback
+        function submitFeedback() {
+            let feedback = {
+                "Valutazione del lavoro": document.getElementById("workRating").value,
+                "Commenti": document.getElementById("workComments").value
+            };
+
+            console.log(feedback);
+            alert("Feedback inviato con successo!");
+        }
+    </script>
+</div>
+    <script>
+        function showTab(tabId) {
+            // Nascondi tutti i contenuti delle schede
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+
+            // Rimuovi la classe 'active' da tutti i bottoni
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            // Mostra la scheda selezionata
+            document.getElementById(tabId).style.display = 'block';
+
+            // Aggiungi la classe 'active' al bottone selezionato
+            var activeButton = document.querySelector(`button[onclick="showTab('${tabId}')"]`);
+            activeButton.classList.add('active');
+        }
+
+        // Mostra la prima scheda di default
+        showTab('tab1');
+    </script>
+
+</body>
+</html>

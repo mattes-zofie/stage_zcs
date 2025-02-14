@@ -1,0 +1,1 @@
+progetto per segnaggio attività svolte durante lo stage
