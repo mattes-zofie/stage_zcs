@@ -78,6 +78,10 @@ document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
 </head>
 <body>
     
+    <a href="./index.html">
+        <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
+        </a>
+    
     <h1>Tabella attività</h1>
     <p  id="risultato"></p>
 
@@ -162,7 +166,7 @@ document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
         </tbody>
     </table>
     
-    <button class="tab-button" onclick="showTab('carica')">carica</button>
+    <button class="tab-button" onclick="showTab('carica');salvaDati()" >carica</button>
     
     </div>
     </div>
@@ -172,10 +176,6 @@ document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
     
     <div id="carica" class="tab-content">
         
-
-    <a href="./index.html">
-    <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
-    </a>
 
     
 <table>
@@ -307,6 +307,11 @@ document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
             // Aggiungi la classe 'active' al bottone selezionato
             var activeButton = document.querySelector(`button[onclick="showTab('${tabId}')"]`);
             activeButton.classList.add('active');
+
+             // Esegui la funzione per mostrare i dati se la scheda 'carica' è selezionata
+    if (tabId === 'carica') {
+        mostraDati();
+    }
         }
 
         // Mostra la prima scheda di default
