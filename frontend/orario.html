@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheda stage</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -74,6 +75,11 @@
     </style>
 </head>
 <body>
+    
+    <a href="./index.html">
+        <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
+        </a>
+    
     <h1>Inserisci l'orario della tua settimana durante lo stage</h1>
 
     <!-- Tabella per visualizzare i giorni della settimana e gli orari -->
@@ -127,9 +133,58 @@
     </table>
 
     <!-- Bottone per aggiungere i dati -->
-    <button class="tab-button" type="button" onclick="addTimes()">Salva Orari</button>
+    <button class="tab-button" type="button" onclick="addTimes()" ondblclick="salvaOrario()">Salva Orari</button>
 
     <script>
+        function salvaOrario() {
+            var entryMonday = document.getElementById('entryMonday').value;
+            var giorno2 = document.getElementById('giorno2').value;
+            var giorno3 = document.getElementById('giorno3').value;
+            var giorno4 = document.getElementById('giorno4').value;
+            var giorno5 = document.getElementById('giorno5').value;
+
+            var giorno1_2 = document.getElementById('giorno1_2').value;
+            var giorno2_2 = document.getElementById('giorno2_2').value;
+            var giorno3_2 = document.getElementById('giorno3_2').value;
+            var giorno4_2 = document.getElementById('giorno4_2').value;
+            var giorno5_2 = document.getElementById('giorno5_2').value;
+
+            var giorno1_3 = document.getElementById('giorno1_3').value;
+            var giorno2_3 = document.getElementById('giorno2_3').value;
+            var giorno3_3 = document.getElementById('giorno3_3').value;
+            var giorno4_3 = document.getElementById('giorno4_3').value;
+            var giorno5_3 = document.getElementById('giorno5_3').value;
+
+            var giorno1_4 = document.getElementById('giorno1_4').value;
+            var giorno2_4 = document.getElementById('giorno2_4').value;
+            var giorno3_4 = document.getElementById('giorno3_4').value;
+            var giorno4_4 = document.getElementById('giorno4_4').value;
+            var giorno5_4 = document.getElementById('giorno5_4').value;
+
+            localStorage.setItem("entryMonday", entryMonday);
+            localStorage.setItem("giorno2", giorno2);
+            localStorage.setItem("giorno3", giorno3);
+            localStorage.setItem("giorno4", giorno4);
+            localStorage.setItem("giorno5", giorno5);
+
+            localStorage.setItem("giorno1_2", giorno1_2);
+            localStorage.setItem("giorno2_2", giorno2_2);
+            localStorage.setItem("giorno3_2", giorno3_2);
+            localStorage.setItem("giorno4_2", giorno4_2);
+            localStorage.setItem("giorno5_2", giorno5_2);
+
+            localStorage.setItem("giorno1_3", giorno1_3);
+            localStorage.setItem("giorno2_3", giorno2_3);
+            localStorage.setItem("giorno3_3", giorno3_3);
+            localStorage.setItem("giorno4_3", giorno4_3);
+            localStorage.setItem("giorno5_3", giorno5_3);
+
+            localStorage.setItem("giorno1_4", giorno1_4);
+            localStorage.setItem("giorno2_4", giorno2_4);
+            localStorage.setItem("giorno3_4", giorno3_4);
+            localStorage.setItem("giorno4_4", giorno4_4);
+            localStorage.setItem("giorno5_4", giorno5_4);
+        }
         // Funzione per raccogliere e visualizzare i dati degli orari
         function addTimes() {
             let times = {

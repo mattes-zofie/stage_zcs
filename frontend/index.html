@@ -16,6 +16,7 @@
             var nome = document.getElementById("nome").value;
             var cognome = document.getElementById("cognome").value;
             
+
           // Salva i dati in localStorage
           localStorage.setItem("nome", nome);
           localStorage.setItem("cognome", cognome);
@@ -34,7 +35,7 @@
   
   <br><br>
 
-  <h2 style="text-align: center; color: rgb(200, 64, 200);">
+  <h2 style="text-align: center; color: rgb(255, 0, 255);">
         Inserisci i tuoi dati, in seguito compila le tabelle. <br>
         Una volta finito riceverai un resoconto scaricabile con le informazioni relative al tuo stage!
   </h2>
@@ -59,7 +60,10 @@
              </div>
 
              <!-- Aggiungi la classe 'tab-button' al pulsante -->
+              <a href="./registrator.html">
+                
              <button type="button" class="tab-button" onclick="salvaDati()" ondblclick="showtab('Invia')">Invia</button>
+              </a>
              </form>
           </td>
         </tr>
