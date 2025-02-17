@@ -18,7 +18,7 @@ public class Webserver {
         server.createContext("/", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String html = new String(Files.readAllBytes(Paths.get("home.html")));
+                String html = new String(Files.readAllBytes(Paths.get("index.html")));
 
                 exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
 
@@ -30,21 +30,6 @@ public class Webserver {
             }
         });
 
-        // Orari
-        server.createContext("/orari", new HttpHandler() {
-            @Override
-            public void handle(HttpExchange exchange) throws IOException {
-                String html = new String(Files.readAllBytes(Paths.get("orari.html")));
-
-                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
-
-                exchange.sendResponseHeaders(200, html.getBytes().length);
-
-                OutputStream os = exchange.getResponseBody();
-                os.write(html.getBytes());
-                os.close();
-            }
-        });
 
         // Registrator
         server.createContext("/registrator", new HttpHandler() {
