@@ -83,6 +83,7 @@ th {
 }
 
 h1 {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: #555;
     font-size: 4em; /* Aumenta la dimensione del testo */

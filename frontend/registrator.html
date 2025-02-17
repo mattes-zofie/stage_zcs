@@ -3,320 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheda stage</title>
+    <title>Scheda Stage e Feedback</title>
     <link rel="stylesheet" href="style.css">
-    <style> 
-    table {
-    width: 90%; /* Imposta la larghezza della tabella */
-    height: 25%;
-    margin: 0 auto; /* Centra la tabella orizzontalmente */
-    border: 3px solid black;
-    padding: 20px;
-}
-        </style>
-<script>
-    function mostraDati() {
-        
-        var nome = localStorage.getItem('nome');
-        var cognome = localStorage.getItem('cognome');
-        
-        var giorno1 = localStorage.getItem('giorno1');
-        var giorno2 = localStorage.getItem('giorno2');
-        var giorno3 = localStorage.getItem('giorno3');
-        var giorno4 = localStorage.getItem('giorno4');
-        var giorno5 = localStorage.getItem('giorno5');
-        
-        var giorno1_2 = localStorage.getItem('giorno1_2');
-        var giorno2_2 = localStorage.getItem('giorno2_2');
-        var giorno3_2 = localStorage.getItem('giorno3_2');
-        var giorno4_2 = localStorage.getItem('giorno4_2');
-        var giorno5_2 = localStorage.getItem('giorno5_2');
-        
-        var giorno1_3 = localStorage.getItem('giorno1_3');
-        var giorno2_3 = localStorage.getItem('giorno2_3');
-        var giorno3_3 = localStorage.getItem('giorno3_3');
-        var giorno4_3 = localStorage.getItem('giorno4_3');
-        var giorno5_3 = localStorage.getItem('giorno5_3');
-        
-        var giorno1_4 = localStorage.getItem('giorno1_4');
-        var giorno2_4 = localStorage.getItem('giorno2_4');
-        var giorno3_4 = localStorage.getItem('giorno3_4');
-        var giorno4_4 = localStorage.getItem('giorno4_4');
-        var giorno5_4 = localStorage.getItem('giorno5_4');
-
-        
-   
-        // Mostra i dati sulla pagina
-        document.getElementById('risultato').innerText = `Utente: ${nome} ${cognome}`;
-
-document.getElementById('giorno1').innerText = `${giorno1}`;
-document.getElementById('giorno2').innerText = `${giorno2}`;
-document.getElementById('giorno3').innerText = `${giorno3}`;
-document.getElementById('giorno4').innerText = `${giorno4}`;
-document.getElementById('giorno5').innerText = `${giorno5}`;
-
-document.getElementById('giorno1_2').innerText = `${giorno1_2}`;
-document.getElementById('giorno2_2').innerText = `${giorno2_2}`;
-document.getElementById('giorno3_2').innerText = `${giorno3_2}`;
-document.getElementById('giorno4_2').innerText = `${giorno4_2}`;
-document.getElementById('giorno5_2').innerText = `${giorno5_2}`;
-
-document.getElementById('giorno1_3').innerText = `${giorno1_3}`;
-document.getElementById('giorno2_3').innerText = `${giorno2_3}`;
-document.getElementById('giorno3_3').innerText = `${giorno3_3}`;
-document.getElementById('giorno4_3').innerText = `${giorno4_3}`;
-document.getElementById('giorno5_3').innerText = `${giorno5_3}`;
-
-document.getElementById('giorno1_4').innerText = `${giorno1_4}`;
-document.getElementById('giorno2_4').innerText = `${giorno2_4}`;
-document.getElementById('giorno3_4').innerText = `${giorno3_4}`;
-document.getElementById('giorno4_4').innerText = `${giorno4_4}`;
-document.getElementById('giorno5_4').innerText = `${giorno5_4}`;
-
-    }
-</script>
-</head>
-<body>
-    
-    <a href="./index.html">
-        <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
-        </a>
-    
-    <h1>Tabella attività</h1>
-    <p  id="risultato"></p>
-
-    
-   
-
-    <!-- Bottoni per cambiare le schede -->
-    <button class="tab-button" onclick="showTab('tab1')">Prima settimana</button>
-    <button class="tab-button" onclick="showTab('tab2')">Seconda settimana</button>
-
-
-    <!-- Contenuto delle schede -->
-    <div id="tab1" class="tab-content">
-        <h2>10/02/25-14/02/25</h2>
-        <table>
-        <thead>
-           <tr>
-             <th>giorno</th>
-             <th>lunedì</th>
-             <th>martedì</th>
-             <th>mercoledì</th>
-             <th>giovedì</th>
-             <th>venerdì</th>
-           </tr>
-         </thead>  
-            
-         <tbody>
-            <tr>
-            <td>mattina</td>
-            <td><input type="text" name="giorno1" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno2" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno3" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno4" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno5" placeholder="Inserisci attività"></td>
-                </tr>
-               
-            <tr>
-            <td>pomeriggio</td>
-            <td><input type="text" name="giorno1_2" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno2_2" placeholder="Inserisci attività"></td>      
-            <td><input type="text" name="giorno3_2" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno4_2" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno5_2" placeholder="Inserisci attività"></td>
-                                                  
-             </tr>
-        </tbody>
-    </table>
-    </div>
-
-    <div id="tab2" class="tab-content">
-    <h2>17/02/25-22/02/25</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>giorno</th>
-                <th>lunedì</th>
-                <th>martedì</th>
-                <th>mercoledì</th>
-                <th>giovedì</th>
-                <th>venerdì</th>
-            </tr>
-        </thead> 
-
-       <tbody>
-        <tr>
-            <td>mattina</td>
-             <td><input type="text" name="giorno1_3" placeholder="Inserisci attività"></td>
-             <td><input type="text" name="giorno2_3" placeholder="Inserisci attività"></td>
-             <td><input type="text" name="giorno3_3" placeholder="Inserisci attività"></td>
-             <td><input type="text" name="giorno4_3" placeholder="Inserisci attività"></td>
-             <td><input type="text" name="giorno5_3" placeholder="Inserisci attività"></td>
-        </tr>
-
-        <tr>
-            <td>pomeriggio</td>
-            <td><input type="text" name="giorno1_4" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno2_4" placeholder="Inserisci attività"></td>      
-            <td><input type="text" name="giorno3_4" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno4_4" placeholder="Inserisci attività"></td>
-            <td><input type="text" name="giorno5_4" placeholder="Inserisci attività"></td>                                 
-        </tr>
-        </tbody>
-    </table>
-    
-    <button class="tab-button" onclick="showTab('carica');salvaDati()" >carica</button>
-    
-    </div>
-    </div>
-    
-</div></div>
-</div>
-    
-    <div id="carica" class="tab-content">
-        
-
-    
-<table>
-    <br>
-    <tr>
-    <th style="background-color: white;">settimana 1</th>
-    <th>Lunedì</th>
-    <th>Martedì</th>
-    <th>Mercoledì</th>
-    <th>Giovedì</th>
-    <th>Venerdì</th>
-    </tr>
-    <th>mattina</th>
-    <td><p id="giorno1"></p></td>
-    <td><p id="giorno2"></p></td>
-    <td><p id="giorno3"></p></td>
-    <td><p id="giorno4"></p></td>
-    <td><p id="giorno5"></p></td>
-    </tr>
-    <th>pomeriggio</th>
-    <td><p id="giorno1_2"></p></td>
-    <td><p id="giorno2_2"></p></td>
-    <td><p id="giorno3_2"></p></td>
-    <td><p id="giorno4_2"></p></td>
-    <td><p id="giorno5_2"></p></td>
-    </tr>
-</table>
-    <br>
-    <table>
-        <tr>
-        <th style="background-color: white;">settimana 2</th>
-        <th>Lunedì</th>
-        <th>Martedì</th>
-        <th>Mercoledì</th>
-        <th>Giovedì</th>
-        <th>Venerdì</th>
-        </tr>
-        <th>mattina</th>
-        <td><p id="giorno1_3"></p></td>
-        <td><p id="giorno2_3"></p></td>
-        <td><p id="giorno3_3"></p></td>
-        <td><p id="giorno4_3"></p></td>
-        <td><p id="giorno5_3"></p></td>
-        </tr>
-        <th>pomeriggio</th>
-        <td><p id="giorno1_4"></p></td>
-        <td><p id="giorno2_4"></p></td>
-        <td><p id="giorno3_4"></p></td>
-        <td><p id="giorno4_4"></p></td>
-        <td><p id="giorno5_4"></p></td>
-        </tr>
-    </table>
-    <script>
-        // Esegui la funzione per mostrare i dati
-        mostraDati();
-    </script>
-
-    <button class="tab-button" onclick="showTab('feedback')">feedback</button>
-
-    
-    <div id="feedback" class="tab-content">
-
-    <h1>Feedback sul Lavoro</h1>
-    
-    <!-- Tabella di feedback sul lavoro -->
-    <h2>Inserisci il tuo feedback</h2>
-    <form id="feedbackForm">
-        <table>
-            <thead>
-                <tr>
-                    <th>Campo</th>
-                    <th>Risposta</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Valutazione del lavoro (1-5)</td>
-                    <td>
-                        <select id="workRating" name="workRating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Commenti aggiuntivi</td>
-                    <td><textarea id="workComments" name="workComments" rows="4" cols="50"></textarea></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Bottone per inviare il feedback -->
-        <button class="tab-button" type="button" onclick="submitFeedback()">Invia Feedback</button>
-    </form>
-</div></div>
-    <script>
-        // Funzione per raccogliere e inviare il feedback
-        function submitFeedback() {
-            let feedback = {
-                "Valutazione del lavoro": document.getElementById("workRating").value,
-                "Commenti": document.getElementById("workComments").value
-            };
-
-            console.log(feedback);
-            alert("Feedback inviato con successo!");
+    <style>
+        table {
+            width: 90%;
+            height: 25%;
+            margin: 0 auto;
+            border: 3px solid black;
+            padding: 20px;
         }
-    </script>
-</div>
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-button {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 11px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.01s ease;
+        }
+        .tab-button:hover {
+            background-color: rgb(255, 0, 255);
+            transform: scale(1.1);
+        }
+
+        .tab-button:active {
+            background-color: rgb(200, 0, 200);
+        }
+        
+        .active {
+            background-color: rgb(255, 0, 255);
+        }
+        button{
+            margin-right: 25px;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgba(0, 0, 0, 0.548);
+            background-color: white;
+        }
+
+        h1, h2 {
+            color: rgb(255, 0, 255);
+        }
+
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="time"], select, textarea {
+            width: 100px;
+        }
+    </style>
     <script>
+        function salvaGiorni() {
+            var giorno1 = document.getElementById('giorno1').value;
+            var giorno2 = document.getElementById('giorno2').value;
+            var giorno3 = document.getElementById('giorno3').value;
+            var giorno4 = document.getElementById('giorno4').value;
+            var giorno5 = document.getElementById('giorno5').value;
+
+            var giorno1_2 = document.getElementById('giorno1_2').value;
+            var giorno2_2 = document.getElementById('giorno2_2').value;
+            var giorno3_2 = document.getElementById('giorno3_2').value;
+            var giorno4_2 = document.getElementById('giorno4_2').value;
+            var giorno5_2 = document.getElementById('giorno5_2').value;
+
+            var giorno1_3 = document.getElementById('giorno1_3').value;
+            var giorno2_3 = document.getElementById('giorno2_3').value;
+            var giorno3_3 = document.getElementById('giorno3_3').value;
+            var giorno4_3 = document.getElementById('giorno4_3').value;
+            var giorno5_3 = document.getElementById('giorno5_3').value;
+
+            var giorno1_4 = document.getElementById('giorno1_4').value;
+            var giorno2_4 = document.getElementById('giorno2_4').value;
+            var giorno3_4 = document.getElementById('giorno3_4').value;
+            var giorno4_4 = document.getElementById('giorno4_4').value;
+            var giorno5_4 = document.getElementById('giorno5_4').value;
+
+            localStorage.setItem("giorno1", giorno1);
+            localStorage.setItem("giorno2", giorno2);
+            localStorage.setItem("giorno3", giorno3);
+            localStorage.setItem("giorno4", giorno4);
+            localStorage.setItem("giorno5", giorno5);
+
+            localStorage.setItem("giorno1_2", giorno1_2);
+            localStorage.setItem("giorno2_2", giorno2_2);
+            localStorage.setItem("giorno3_2", giorno3_2);
+            localStorage.setItem("giorno4_2", giorno4_2);
+            localStorage.setItem("giorno5_2", giorno5_2);
+
+            localStorage.setItem("giorno1_3", giorno1_3);
+            localStorage.setItem("giorno2_3", giorno2_3);
+            localStorage.setItem("giorno3_3", giorno3_3);
+            localStorage.setItem("giorno4_3", giorno4_3);
+            localStorage.setItem("giorno5_3", giorno5_3);
+
+            localStorage.setItem("giorno1_4", giorno1_4);
+            localStorage.setItem("giorno2_4", giorno2_4);
+            localStorage.setItem("giorno3_4", giorno3_4);
+            localStorage.setItem("giorno4_4", giorno4_4);
+            localStorage.setItem("giorno5_4", giorno5_4);
+        }
+
+        function mostraDati() {
+            var nome = localStorage.getItem('nome');
+            var cognome = localStorage.getItem('cognome');
+            
+            document.getElementById('risultato').innerText = "Utente: " + nome + " " + cognome;
+
+            var giorno1 = localStorage.getItem('giorno1');
+            var giorno2 = localStorage.getItem('giorno2');
+            var giorno3 = localStorage.getItem('giorno3');
+            var giorno4 = localStorage.getItem('giorno4');
+            var giorno5 = localStorage.getItem('giorno5');
+            
+            var giorno1_2 = localStorage.getItem('giorno1_2');
+            var giorno2_2 = localStorage.getItem('giorno2_2');
+            var giorno3_2 = localStorage.getItem('giorno3_2');
+            var giorno4_2 = localStorage.getItem('giorno4_2');
+            var giorno5_2 = localStorage.getItem('giorno5_2');
+            
+            var giorno1_3 = localStorage.getItem('giorno1_3');
+            var giorno2_3 = localStorage.getItem('giorno2_3');
+            var giorno3_3 = localStorage.getItem('giorno3_3');
+            var giorno4_3 = localStorage.getItem('giorno4_3');
+            var giorno5_3 = localStorage.getItem('giorno5_3');
+            
+            var giorno1_4 = localStorage.getItem('giorno1_4');
+            var giorno2_4 = localStorage.getItem('giorno2_4');
+            var giorno3_4 = localStorage.getItem('giorno3_4');
+            var giorno4_4 = localStorage.getItem('giorno4_4');
+            var giorno5_4 = localStorage.getItem('giorno5_4');
+
+            // Stampa i dati nella pagina
+            document.getElementById('utente').innerText = "Utente: " + nome + " " + cognome;
+            document.getElementById('risultato').innerHTML = 
+                "<h3>Dati salvati:</h3>" +
+                "<p><strong>1° settimana mattina:</strong></p>" +
+                "<ul>" +
+                    "<li>Lunedì: " + (giorno1 || "Nessuna attività") + "</li>" +
+                    "<li>Martedì: " + (giorno2 || "Nessuna attività") + "</li>" +
+                    "<li>Mercoledì: " + (giorno3 || "Nessuna attività") + "</li>" +
+                    "<li>Giovedì: " + (giorno4 || "Nessuna attività") + "</li>" +
+                    "<li>Venerdì: " + (giorno5 || "Nessuna attività") + "</li>" +
+                "</ul>" +
+                "<p><strong>1° settimana pomeriggio:</strong></p>" +
+                "<ul>" +
+                    "<li>Lunedì: " + (giorno1_2 || "Nessuna attività") + "</li>" +
+                    "<li>Martedì: " + (giorno2_2 || "Nessuna attività") + "</li>" +
+                    "<li>Mercoledì: " + (giorno3_2 || "Nessuna attività") + "</li>" +
+                    "<li>Giovedì: " + (giorno4_2 || "Nessuna attività") + "</li>" +
+                    "<li>Venerdì: " + (giorno5_2 || "Nessuna attività") + "</li>" +
+                "</ul>" +
+                "<p><strong>2° settimana mattina:</strong></p>" +
+                "<ul>" +
+                    "<li>Lunedì: " + (giorno1_3 || "Nessuna attività") + "</li>" +
+                    "<li>Martedì: " + (giorno2_3 || "Nessuna attività") + "</li>" +
+                    "<li>Mercoledì: " + (giorno3_3 || "Nessuna attività") + "</li>" +
+                    "<li>Giovedì: " + (giorno4_3 || "Nessuna attività") + "</li>" +
+                    "<li>Venerdì: " + (giorno5_3 || "Nessuna attività") + "</li>" +
+                "</ul>" +
+                "<p><strong>2° settimana pomeriggio:</strong></p>" +
+                "<ul>" +
+                    "<li>Lunedì: " + (giorno1_4 || "Nessuna attività") + "</li>" +
+                    "<li>Martedì: " + (giorno2_4 || "Nessuna attività") + "</li>" +
+                    "<li>Mercoledì: " + (giorno3_4 || "Nessuna attività") + "</li>" +
+                    "<li>Giovedì: " + (giorno4_4 || "Nessuna attività") + "</li>" +
+                    "<li>Venerdì: " + (giorno5_4 || "Nessuna attività") + "</li>" +
+                "</ul>";
+        }
+
         function showTab(tabId) {
-            // Nascondi tutti i contenuti delle schede
             var tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(function(tab) {
                 tab.style.display = 'none';
             });
 
-            // Rimuovi la classe 'active' da tutti i bottoni
             var buttons = document.querySelectorAll('.tab-button');
             buttons.forEach(function(button) {
                 button.classList.remove('active');
             });
 
-            // Mostra la scheda selezionata
             document.getElementById(tabId).style.display = 'block';
 
-            // Aggiungi la classe 'active' al bottone selezionato
-            var activeButton = document.querySelector(`button[onclick="showTab('${tabId}')"]`);
+            var activeButton = document.querySelector(button[onclick="showTab('${tabId}')"]);
             activeButton.classList.add('active');
-
-             // Esegui la funzione per mostrare i dati se la scheda 'carica' è selezionata
-    if (tabId === 'carica') {
-        mostraDati();
-    }
         }
 
-        // Mostra la prima scheda di default
-        showTab('tab1');
-    </script>
 
+        window.onload = function() {
+            showTab('tab1');
+        };
+    </script>
+</head>
+<body>
+    <a href="./index.html">
+        <img src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360" alt="stage" class="bottone-home" style="height: 100px; width: 100; position: absolute;" />
+    </a>
+
+    <h1>Tabella attività</h1>
+    <p id="utente"></p>
+    <p id="risultato"></p>
+
+    <button class="tab-button" onclick="showTab('tab1')">Prima settimana</button>
+    <button class="tab-button" onclick="showTab('tab2')">Seconda settimana</button>
+
+    <!-- Tabella attività -->
+    <div id="tab1" class="tab-content">
+        <h2>1° settimana</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Giorno</th>
+                    <th>Mattina</th>
+                    <th>Pomeriggio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunedì</td>
+                    <td><input type="text" id="giorno1"></td>
+                    <td><input type="text" id="giorno1_2"></td>
+                </tr>
+                <tr>
+                    <td>Martedì</td>
+                    <td><input type="text" id="giorno2"></td>
+                    <td><input type="text" id="giorno2_2"></td>
+                </tr>
+                <tr>
+                    <td>Mercoledì</td>
+                    <td><input type="text" id="giorno3"></td>
+                    <td><input type="text" id="giorno3_2"></td>
+                </tr>
+                <tr>
+                    <td>Giovedì</td>
+                    <td><input type="text" id="giorno4"></td>
+                    <td><input type="text" id="giorno4_2"></td>
+                </tr>
+                <tr>
+                    <td>Venerdì</td>
+                    <td><input type="text" id="giorno5"></td>
+                    <td><input type="text" id="giorno5_2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tabella attività seconda settimana -->
+    <div id="tab2" class="tab-content">
+        <h2>2° settimana</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Giorno</th>
+                    <th>Mattina</th>
+                    <th>Pomeriggio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunedì</td>
+                    <td><input type="text" id="giorno1_3"></td>
+                    <td><input type="text" id="giorno1_4"></td>
+                </tr>
+                <tr>
+                    <td>Martedì</td>
+                    <td><input type="text" id="giorno2_3"></td>
+                    <td><input type="text" id="giorno2_4"></td>
+                </tr>
+                <tr>
+                    <td>Mercoledì</td>
+                    <td><input type="text" id="giorno3_3"></td>
+                    <td><input type="text" id="giorno3_4"></td>
+                </tr>
+                <tr>
+                    <td>Giovedì</td>
+                    <td><input type="text" id="giorno4_3"></td>
+                    <td><input type="text" id="giorno4_4"></td>
+                </tr>
+                <tr>
+                    <td>Venerdì</td>
+                    <td><input type="text" id="giorno5_3"></td>
+                    <td><input type="text" id="giorno5_4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <br><br>
+    <button class="tab-button" onclick="salvaGiorni()">Salva i giorni</button>
+    <button class="tab-button" onclick="mostraDati()">Mostra i dati salvati</button>
+    <a href="./stampo.html">
+                
+        <button type="button" class="tab-button" onclick="showtab('stampa')">stampa</button>
+         </a>
+    
 </body>
 </html>
+
+
