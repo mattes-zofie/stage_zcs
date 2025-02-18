@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 
 public class Webserver {
 
+    //inizializzazioni delle variabili 
     private static final String FRONTEND_DIR = "frontend";
     private static final String CHARSET = "UTF-8";
     private static final int PORT = 8080;
@@ -21,6 +22,7 @@ public class Webserver {
     private static final Logger logger = Logger.getLogger(Webserver.class.getName());
 
     public static void main(String[] args) throws Exception {
+        //serve alla porta i file da leggere
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 0);
         server.createContext("/", createHandler("index.html", TEXT_HTML));
         server.createContext("/registrator.html", createHandler("registrator.html", TEXT_HTML));
@@ -35,13 +37,18 @@ public class Webserver {
         return new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
+                //log richiesta
                 logger.info("Request received: " + exchange.getRequestMethod() + " " + exchange.getRequestURI());
+                //lettura file
                 byte[] response = Files.readAllBytes(Paths.get(FRONTEND_DIR, fileName));
+                //setup informazioni risposta
                 exchange.getResponseHeaders().set("Content-Type", mimeType + "; charset=" + CHARSET);
                 exchange.sendResponseHeaders(200, response.length);
+                //invio risposta
                 try (OutputStream os = exchange.getResponseBody()) {
                     os.write(response);
                 }
+                //log risposta
                 logger.info("Served " + fileName + " (" + response.length + " bytes)");
             }
         };
