@@ -6,15 +6,16 @@
     <title>Home Page</title>
     <script>
       function salvaDati() {
+        //creazione nome e cognome
         var nome = document.getElementById("nome").value.trim();
         var cognome = document.getElementById("cognome").value.trim();
         console.log("Salvando dati:", nome, cognome);
-
+        //controllo inserimento nome e cognome
         if (nome === "" || cognome === "") {
           alert("Per favore, inserisci sia il nome che il cognome.");
           return;
         }
-
+        //memorizzazione dati
         localStorage.setItem("nome", nome);
         localStorage.setItem("cognome", cognome);
 
@@ -34,7 +35,7 @@
       Una volta finito riceverai un resoconto scaricabile con le informazioni
       relative al tuo stage!
     </h2>
-
+    <!--tabella con inserimento nome e cognome da input-->
     <table class="index-table">
       <tr>
         <th style="background-color: white">Dati Stagista</th>
@@ -50,6 +51,7 @@
               <label for="cognome">Cognome:</label>
               <input type="text" id="cognome" name="cognome" required />
             </div>
+            <!--tasto per il salvataggio di cio che viene inserito-->
             <button type="button" class="tab-button" onclick="salvaDati()">
               Invia
             </button>
