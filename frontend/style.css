@@ -1,19 +1,50 @@
-table {
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.548);
+    background-color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #555;
+    font-size: 4em;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .center-magenta {
+    color: rgb(255, 0, 255);
+  }
+  
+  .index-table {
     width: 50%;
     margin: 0 auto;
     border: 3px solid black;
     padding: 20px;
   }
   
-  img {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .schedule-table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 3px solid black;
+    padding: 20px;
   }
   
-  label {
-    display: block;
-    margin-bottom: 8px;
+  table, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
   }
   
   input[type="text"] {
@@ -24,34 +55,10 @@ table {
     box-sizing: border-box;
   }
   
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
   button {
     display: block;
     margin: auto;
   }
-  
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgba(0, 0, 0, 0.548);
-    background-color: white;
-  }
-  
-  table, th, td {
-    border: 1px solid black;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
   .tab-button {
     font-family: 'Courier New', Courier, monospace;
     padding: 11px 15px;
@@ -61,6 +68,7 @@ table {
     color: white;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
   }
   .tab-button:hover {
     background-color: rgb(255, 0, 255);
@@ -73,13 +81,37 @@ table {
     background-color: rgb(200, 64, 200);
   }
   
-  h1 {
+  .download-btn {
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    color: #555;
-    font-size: 4em;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .download-btn:hover {
+    background-color: rgb(255, 0, 255);
   }
   
+  .home-icon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  input[type="time"],
+  select,
+  textarea {
+    width: 100px;
+  }
   textarea {
     height: 120px;
     resize: vertical;

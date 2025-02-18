@@ -5,70 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scheda Stage e Feedback</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      table {
-        width: 70%;
-        margin: 0 auto;
-        border-collapse: collapse;
-        border: 3px solid black;
-        padding: 20px;
-      }
-      .tab-content {
-        display: none;
-      }
-      .tab-button {
-        font-family: "Courier New", Courier, monospace;
-        padding: 11px 20px;
-        margin: 5px;
-        cursor: pointer;
-        background-color: #555;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: background-color 0.3s ease, transform 0.1s ease;
-      }
-      .tab-button:hover {
-        background-color: rgb(255, 0, 255);
-        transform: scale(1.1);
-      }
-      .tab-button:active {
-        background-color: rgb(200, 0, 200);
-      }
-      .active {
-        background-color: rgb(255, 0, 255);
-      }
-      button {
-        margin-right: 25px;
-      }
-      body {
-        font-family: "Courier New", Courier, monospace;
-        color: rgba(0, 0, 0, 0.548);
-        background-color: white;
-      }
-      h1,
-      h2 {
-        color: rgb(255, 0, 255);
-      }
-      table,
-      th,
-      td {
-        border: 1px solid black;
-      }
-      th,
-      td {
-        padding: 10px;
-        text-align: center;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-      input[type="time"],
-      select,
-      textarea {
-        width: 100px;
-      }
-    </style>
     <script>
       function salvaGiorni() {
         var ids = [
@@ -213,12 +149,10 @@
         tabs.forEach(function (tab) {
           tab.style.display = "none";
         });
-
         var buttons = document.querySelectorAll(".tab-button");
         buttons.forEach(function (button) {
           button.classList.remove("active");
         });
-
         document.getElementById(tabId).style.display = "block";
         if (btn) {
           btn.classList.add("active");
@@ -236,8 +170,7 @@
       <img
         src="https://img.freepik.com/vettori-premium/simbolo-della-home-page-dell-icona-per-il-sito-web_414847-462.jpg?w=360"
         alt="stage"
-        class="bottone-home"
-        style="height: 100px; width: 100px; position: absolute"
+        class="home-icon"
       />
     </a>
 
@@ -254,7 +187,7 @@
 
     <div id="tab1" class="tab-content">
       <h2>1° settimana</h2>
-      <table>
+      <table class="schedule-table">
         <thead>
           <tr>
             <th>Giorno</th>
@@ -294,7 +227,7 @@
 
     <div id="tab2" class="tab-content">
       <h2>2° settimana</h2>
-      <table>
+      <table class="schedule-table">
         <thead>
           <tr>
             <th>Giorno</th>

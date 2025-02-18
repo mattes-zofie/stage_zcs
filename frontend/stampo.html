@@ -5,30 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scarica File</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .download-btn {
-        font-family: "Courier New", Courier, monospace;
-        padding: 10px 20px;
-        margin: 20px;
-        cursor: pointer;
-        background-color: #555;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-      }
-      .download-btn:hover {
-        background-color: rgb(255, 0, 255);
-      }
-    </style>
   </head>
   <body>
     <h1>Scarica il file con i dati dello stage</h1>
     <button class="download-btn" onclick="scaricaFile()">
       Scarica Scheda Stage
     </button>
-
     <script>
       function scaricaFile() {
         var nome = localStorage.getItem("nome") || "";
