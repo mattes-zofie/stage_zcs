@@ -8,11 +8,12 @@
   </head>
   <body>
     <h1>Scarica il file con i dati dello stage</h1>
+    <!--tasto con la funzione di stampa-->
     <button class="download-btn" onclick="scaricaFile()">
       Scarica Scheda Stage
     </button>
     <script>
-      function scaricaFile() {
+      function scaricaFile() {//funzione per la stampa in un nuovo documento di tutti i dati
         var nome = localStorage.getItem("nome") || "";
         var cognome = localStorage.getItem("cognome") || "";
 
