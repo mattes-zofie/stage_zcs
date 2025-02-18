@@ -1,112 +1,77 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scarica File</title>
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Stilizzazione del bottone per il download */
-        .download-btn {
-            font-family: 'Courier New', Courier, monospace;
-            padding: 10px 20px;
-            margin: 20px;
-            cursor: pointer;
-            background-color: #555;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: rgb(255, 0, 255);
-        }
-    </style>
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Scarica il file con i dati dello stage</h1>
-
-    <!-- Bottone per scaricare il file -->
-    <button class="download-btn" onclick="scaricaFile()">Scarica Scheda Stage</button>
-
+    <button class="download-btn" onclick="scaricaFile()">
+      Scarica Scheda Stage
+    </button>
     <script>
-        function scaricaFile() {
-            // Ottieni i dati dell'utente
-            var nome = localStorage.getItem('nome');
-            var cognome = localStorage.getItem('cognome');
+      function scaricaFile() {
+        var nome = localStorage.getItem("nome") || "";
+        var cognome = localStorage.getItem("cognome") || "";
 
-            // Ottieni i valori dei giorni dalla localStorage
-            var giorno1 = localStorage.getItem('giorno1');
-            var giorno2 = localStorage.getItem('giorno2');
-            var giorno3 = localStorage.getItem('giorno3');
-            var giorno4 = localStorage.getItem('giorno4');
-            var giorno5 = localStorage.getItem('giorno5');
+        var giorno1 = localStorage.getItem("giorno1") || "Nessuna attività";
+        var giorno2 = localStorage.getItem("giorno2") || "Nessuna attività";
+        var giorno3 = localStorage.getItem("giorno3") || "Nessuna attività";
+        var giorno4 = localStorage.getItem("giorno4") || "Nessuna attività";
+        var giorno5 = localStorage.getItem("giorno5") || "Nessuna attività";
 
-            var giorno1_2 = localStorage.getItem('giorno1_2');
-            var giorno2_2 = localStorage.getItem('giorno2_2');
-            var giorno3_2 = localStorage.getItem('giorno3_2');
-            var giorno4_2 = localStorage.getItem('giorno4_2');
-            var giorno5_2 = localStorage.getItem('giorno5_2');
+        var giorno1_2 = localStorage.getItem("giorno1_2") || "Nessuna attività";
+        var giorno2_2 = localStorage.getItem("giorno2_2") || "Nessuna attività";
+        var giorno3_2 = localStorage.getItem("giorno3_2") || "Nessuna attività";
+        var giorno4_2 = localStorage.getItem("giorno4_2") || "Nessuna attività";
+        var giorno5_2 = localStorage.getItem("giorno5_2") || "Nessuna attività";
 
-            var giorno1_3 = localStorage.getItem('giorno1_3');
-            var giorno2_3 = localStorage.getItem('giorno2_3');
-            var giorno3_3 = localStorage.getItem('giorno3_3');
-            var giorno4_3 = localStorage.getItem('giorno4_3');
-            var giorno5_3 = localStorage.getItem('giorno5_3');
+        var giorno1_3 = localStorage.getItem("giorno1_3") || "Nessuna attività";
+        var giorno2_3 = localStorage.getItem("giorno2_3") || "Nessuna attività";
+        var giorno3_3 = localStorage.getItem("giorno3_3") || "Nessuna attività";
+        var giorno4_3 = localStorage.getItem("giorno4_3") || "Nessuna attività";
+        var giorno5_3 = localStorage.getItem("giorno5_3") || "Nessuna attività";
 
-            var giorno1_4 = localStorage.getItem('giorno1_4');
-            var giorno2_4 = localStorage.getItem('giorno2_4');
-            var giorno3_4 = localStorage.getItem('giorno3_4');
-            var giorno4_4 = localStorage.getItem('giorno4_4');
-            var giorno5_4 = localStorage.getItem('giorno5_4');
+        var giorno1_4 = localStorage.getItem("giorno1_4") || "Nessuna attività";
+        var giorno2_4 = localStorage.getItem("giorno2_4") || "Nessuna attività";
+        var giorno3_4 = localStorage.getItem("giorno3_4") || "Nessuna attività";
+        var giorno4_4 = localStorage.getItem("giorno4_4") || "Nessuna attività";
+        var giorno5_4 = localStorage.getItem("giorno5_4") || "Nessuna attività";
 
-            // Crea una stringa con i dati
-            var contenuto = `Utente: ${nome} ${cognome}\n\n`;
-            contenuto += `1° settimana mattina:\n`;
-            contenuto += `Lunedì: ${giorno1 || "Nessuna attività"}\n`;
-            contenuto += `Martedì: ${giorno2 || "Nessuna attività"}\n`;
-            contenuto += `Mercoledì: ${giorno3 || "Nessuna attività"}\n`;
-            contenuto += `Giovedì: ${giorno4 || "Nessuna attività"}\n`;
-            contenuto += `Venerdì: ${giorno5 || "Nessuna attività"}\n\n`;
+        var contenuto = `Utente: ${nome} ${cognome}\n\n`;
+        contenuto += `1° settimana mattina:\n`;
+        contenuto += `Lunedì: ${giorno1}\n`;
+        contenuto += `Martedì: ${giorno2}\n`;
+        contenuto += `Mercoledì: ${giorno3}\n`;
+        contenuto += `Giovedì: ${giorno4}\n`;
+        contenuto += `Venerdì: ${giorno5}\n\n`;
+        contenuto += `1° settimana pomeriggio:\n`;
+        contenuto += `Lunedì: ${giorno1_2}\n`;
+        contenuto += `Martedì: ${giorno2_2}\n`;
+        contenuto += `Mercoledì: ${giorno3_2}\n`;
+        contenuto += `Giovedì: ${giorno4_2}\n`;
+        contenuto += `Venerdì: ${giorno5_2}\n\n`;
+        contenuto += `2° settimana mattina:\n`;
+        contenuto += `Lunedì: ${giorno1_3}\n`;
+        contenuto += `Martedì: ${giorno2_3}\n`;
+        contenuto += `Mercoledì: ${giorno3_3}\n`;
+        contenuto += `Giovedì: ${giorno4_3}\n`;
+        contenuto += `Venerdì: ${giorno5_3}\n\n`;
+        contenuto += `2° settimana pomeriggio:\n`;
+        contenuto += `Lunedì: ${giorno1_4}\n`;
+        contenuto += `Martedì: ${giorno2_4}\n`;
+        contenuto += `Mercoledì: ${giorno3_4}\n`;
+        contenuto += `Giovedì: ${giorno4_4}\n`;
+        contenuto += `Venerdì: ${giorno5_4}\n`;
 
-            contenuto += `1° settimana pomeriggio:\n`;
-            contenuto += `Lunedì: ${giorno1_2 || "Nessuna attività"}\n`;
-            contenuto += `Martedì: ${giorno2_2 || "Nessuna attività"}\n`;
-            contenuto += `Mercoledì: ${giorno3_2 || "Nessuna attività"}\n`;
-            contenuto += `Giovedì: ${giorno4_2 || "Nessuna attività"}\n`;
-            contenuto += `Venerdì: ${giorno5_2 || "Nessuna attività"}\n\n`;
-
-            contenuto += `2° settimana mattina:\n`;
-            contenuto += `Lunedì: ${giorno1_3 || "Nessuna attività"}\n`;
-            contenuto += `Martedì: ${giorno2_3 || "Nessuna attività"}\n`;
-            contenuto += `Mercoledì: ${giorno3_3 || "Nessuna attività"}\n`;
-            contenuto += `Giovedì: ${giorno4_3 || "Nessuna attività"}\n`;
-            contenuto += `Venerdì: ${giorno5_3 || "Nessuna attività"}\n\n`;
-
-            contenuto += `2° settimana pomeriggio:\n`;
-            contenuto += `Lunedì: ${giorno1_4 || "Nessuna attività"}\n`;
-            contenuto += `Martedì: ${giorno2_4 || "Nessuna attività"}\n`;
-            contenuto += `Mercoledì: ${giorno3_4 || "Nessuna attività"}\n`;
-            contenuto += `Giovedì: ${giorno4_4 || "Nessuna attività"}\n`;
-            contenuto += `Venerdì: ${giorno5_4 || "Nessuna attività"}\n`;
-
-            // Crea un file Blob con i dati
-            var blob = new Blob([contenuto], { type: 'text/plain' });
-
-            // Crea un link per il download
-            var link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'scheda_stage.txt'; // Nome del file da scaricare
-
-            // Fai partire il download
-            link.click();
-        }
+        var blob = new Blob([contenuto], { type: "text/plain" });
+        var link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "scheda_stage.txt";
+        link.click();
+      }
     </script>
-
-</body>
+  </body>
 </html>
-
