@@ -8,16 +8,14 @@
     <style>
       table {
         width: 70%;
-        height: 25%;
         margin: 0 auto;
+        border-collapse: collapse;
         border: 3px solid black;
         padding: 20px;
-        border-collapse: collapse;
       }
       .tab-content {
         display: none;
       }
-
       .tab-button {
         font-family: "Courier New", Courier, monospace;
         padding: 11px 20px;
@@ -73,160 +71,141 @@
     </style>
     <script>
       function salvaGiorni() {
-        var giorno1 = document.getElementById("giorno1").value;
-        var giorno2 = document.getElementById("giorno2").value;
-        var giorno3 = document.getElementById("giorno3").value;
-        var giorno4 = document.getElementById("giorno4").value;
-        var giorno5 = document.getElementById("giorno5").value;
-
-        var giorno1_2 = document.getElementById("giorno1_2").value;
-        var giorno2_2 = document.getElementById("giorno2_2").value;
-        var giorno3_2 = document.getElementById("giorno3_2").value;
-        var giorno4_2 = document.getElementById("giorno4_2").value;
-        var giorno5_2 = document.getElementById("giorno5_2").value;
-
-        var giorno1_3 = document.getElementById("giorno1_3").value;
-        var giorno2_3 = document.getElementById("giorno2_3").value;
-        var giorno3_3 = document.getElementById("giorno3_3").value;
-        var giorno4_3 = document.getElementById("giorno4_3").value;
-        var giorno5_3 = document.getElementById("giorno5_3").value;
-
-        var giorno1_4 = document.getElementById("giorno1_4").value;
-        var giorno2_4 = document.getElementById("giorno2_4").value;
-        var giorno3_4 = document.getElementById("giorno3_4").value;
-        var giorno4_4 = document.getElementById("giorno4_4").value;
-        var giorno5_4 = document.getElementById("giorno5_4").value;
-
-        localStorage.setItem("giorno1", giorno1);
-        localStorage.setItem("giorno2", giorno2);
-        localStorage.setItem("giorno3", giorno3);
-        localStorage.setItem("giorno4", giorno4);
-        localStorage.setItem("giorno5", giorno5);
-
-        localStorage.setItem("giorno1_2", giorno1_2);
-        localStorage.setItem("giorno2_2", giorno2_2);
-        localStorage.setItem("giorno3_2", giorno3_2);
-        localStorage.setItem("giorno4_2", giorno4_2);
-        localStorage.setItem("giorno5_2", giorno5_2);
-
-        localStorage.setItem("giorno1_3", giorno1_3);
-        localStorage.setItem("giorno2_3", giorno2_3);
-        localStorage.setItem("giorno3_3", giorno3_3);
-        localStorage.setItem("giorno4_3", giorno4_3);
-        localStorage.setItem("giorno5_3", giorno5_3);
-
-        localStorage.setItem("giorno1_4", giorno1_4);
-        localStorage.setItem("giorno2_4", giorno2_4);
-        localStorage.setItem("giorno3_4", giorno3_4);
-        localStorage.setItem("giorno4_4", giorno4_4);
-        localStorage.setItem("giorno5_4", giorno5_4);
+        var ids = [
+          "giorno1",
+          "giorno2",
+          "giorno3",
+          "giorno4",
+          "giorno5",
+          "giorno1_2",
+          "giorno2_2",
+          "giorno3_2",
+          "giorno4_2",
+          "giorno5_2",
+          "giorno1_3",
+          "giorno2_3",
+          "giorno3_3",
+          "giorno4_3",
+          "giorno5_3",
+          "giorno1_4",
+          "giorno2_4",
+          "giorno3_4",
+          "giorno4_4",
+          "giorno5_4",
+        ];
+        ids.forEach(function (id) {
+          var value = document.getElementById(id).value.trim();
+          localStorage.setItem(id, value);
+        });
+        alert("Giorni salvati!");
       }
 
       function mostraDati() {
-        var nome = localStorage.getItem("nome");
-        var cognome = localStorage.getItem("cognome");
-
+        var nome = localStorage.getItem("nome") || "";
+        var cognome = localStorage.getItem("cognome") || "";
         document.getElementById("utente").innerText =
           "Utente: " + nome + " " + cognome;
 
-        var giorno1 = localStorage.getItem("giorno1");
-        var giorno2 = localStorage.getItem("giorno2");
-        var giorno3 = localStorage.getItem("giorno3");
-        var giorno4 = localStorage.getItem("giorno4");
-        var giorno5 = localStorage.getItem("giorno5");
+        var giorno1 = localStorage.getItem("giorno1") || "Nessuna attività";
+        var giorno2 = localStorage.getItem("giorno2") || "Nessuna attività";
+        var giorno3 = localStorage.getItem("giorno3") || "Nessuna attività";
+        var giorno4 = localStorage.getItem("giorno4") || "Nessuna attività";
+        var giorno5 = localStorage.getItem("giorno5") || "Nessuna attività";
 
-        var giorno1_2 = localStorage.getItem("giorno1_2");
-        var giorno2_2 = localStorage.getItem("giorno2_2");
-        var giorno3_2 = localStorage.getItem("giorno3_2");
-        var giorno4_2 = localStorage.getItem("giorno4_2");
-        var giorno5_2 = localStorage.getItem("giorno5_2");
+        var giorno1_2 = localStorage.getItem("giorno1_2") || "Nessuna attività";
+        var giorno2_2 = localStorage.getItem("giorno2_2") || "Nessuna attività";
+        var giorno3_2 = localStorage.getItem("giorno3_2") || "Nessuna attività";
+        var giorno4_2 = localStorage.getItem("giorno4_2") || "Nessuna attività";
+        var giorno5_2 = localStorage.getItem("giorno5_2") || "Nessuna attività";
 
-        var giorno1_3 = localStorage.getItem("giorno1_3");
-        var giorno2_3 = localStorage.getItem("giorno2_3");
-        var giorno3_3 = localStorage.getItem("giorno3_3");
-        var giorno4_3 = localStorage.getItem("giorno4_3");
-        var giorno5_3 = localStorage.getItem("giorno5_3");
+        var giorno1_3 = localStorage.getItem("giorno1_3") || "Nessuna attività";
+        var giorno2_3 = localStorage.getItem("giorno2_3") || "Nessuna attività";
+        var giorno3_3 = localStorage.getItem("giorno3_3") || "Nessuna attività";
+        var giorno4_3 = localStorage.getItem("giorno4_3") || "Nessuna attività";
+        var giorno5_3 = localStorage.getItem("giorno5_3") || "Nessuna attività";
 
-        var giorno1_4 = localStorage.getItem("giorno1_4");
-        var giorno2_4 = localStorage.getItem("giorno2_4");
-        var giorno3_4 = localStorage.getItem("giorno3_4");
-        var giorno4_4 = localStorage.getItem("giorno4_4");
-        var giorno5_4 = localStorage.getItem("giorno5_4");
+        var giorno1_4 = localStorage.getItem("giorno1_4") || "Nessuna attività";
+        var giorno2_4 = localStorage.getItem("giorno2_4") || "Nessuna attività";
+        var giorno3_4 = localStorage.getItem("giorno3_4") || "Nessuna attività";
+        var giorno4_4 = localStorage.getItem("giorno4_4") || "Nessuna attività";
+        var giorno5_4 = localStorage.getItem("giorno5_4") || "Nessuna attività";
 
-        document.getElementById("risultato").innerHTML =
+        var risultatoHTML =
           "<h3>Dati salvati:</h3>" +
           "<p><strong>1° settimana mattina:</strong></p>" +
           "<ul>" +
           "<li>Lunedì: " +
-          (giorno1 || "Nessuna attività") +
+          giorno1 +
           "</li>" +
           "<li>Martedì: " +
-          (giorno2 || "Nessuna attività") +
+          giorno2 +
           "</li>" +
           "<li>Mercoledì: " +
-          (giorno3 || "Nessuna attività") +
+          giorno3 +
           "</li>" +
           "<li>Giovedì: " +
-          (giorno4 || "Nessuna attività") +
+          giorno4 +
           "</li>" +
           "<li>Venerdì: " +
-          (giorno5 || "Nessuna attività") +
+          giorno5 +
           "</li>" +
           "</ul>" +
           "<p><strong>1° settimana pomeriggio:</strong></p>" +
           "<ul>" +
           "<li>Lunedì: " +
-          (giorno1_2 || "Nessuna attività") +
+          giorno1_2 +
           "</li>" +
           "<li>Martedì: " +
-          (giorno2_2 || "Nessuna attività") +
+          giorno2_2 +
           "</li>" +
           "<li>Mercoledì: " +
-          (giorno3_2 || "Nessuna attività") +
+          giorno3_2 +
           "</li>" +
           "<li>Giovedì: " +
-          (giorno4_2 || "Nessuna attività") +
+          giorno4_2 +
           "</li>" +
           "<li>Venerdì: " +
-          (giorno5_2 || "Nessuna attività") +
+          giorno5_2 +
           "</li>" +
           "</ul>" +
           "<p><strong>2° settimana mattina:</strong></p>" +
           "<ul>" +
           "<li>Lunedì: " +
-          (giorno1_3 || "Nessuna attività") +
+          giorno1_3 +
           "</li>" +
           "<li>Martedì: " +
-          (giorno2_3 || "Nessuna attività") +
+          giorno2_3 +
           "</li>" +
           "<li>Mercoledì: " +
-          (giorno3_3 || "Nessuna attività") +
+          giorno3_3 +
           "</li>" +
           "<li>Giovedì: " +
-          (giorno4_3 || "Nessuna attività") +
+          giorno4_3 +
           "</li>" +
           "<li>Venerdì: " +
-          (giorno5_3 || "Nessuna attività") +
+          giorno5_3 +
           "</li>" +
           "</ul>" +
           "<p><strong>2° settimana pomeriggio:</strong></p>" +
           "<ul>" +
           "<li>Lunedì: " +
-          (giorno1_4 || "Nessuna attività") +
+          giorno1_4 +
           "</li>" +
           "<li>Martedì: " +
-          (giorno2_4 || "Nessuna attività") +
+          giorno2_4 +
           "</li>" +
           "<li>Mercoledì: " +
-          (giorno3_4 || "Nessuna attività") +
+          giorno3_4 +
           "</li>" +
           "<li>Giovedì: " +
-          (giorno4_4 || "Nessuna attività") +
+          giorno4_4 +
           "</li>" +
           "<li>Venerdì: " +
-          (giorno5_4 || "Nessuna attività") +
+          giorno5_4 +
           "</li>" +
           "</ul>";
+
+        document.getElementById("risultato").innerHTML = risultatoHTML;
       }
 
       function showTab(tabId, btn) {
@@ -248,6 +227,7 @@
 
       window.onload = function () {
         showTab("tab1");
+        mostraDati();
       };
     </script>
   </head>
