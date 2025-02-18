@@ -30,6 +30,21 @@ public class Webserver {
             }
         });
 
+        // stampa
+        server.createContext("/stampo", new HttpHandler() {
+            @Override
+            public void handle(HttpExchange exchange) throws IOException {
+                String html = new String(Files.readAllBytes(Paths.get("stampo.html")));
+
+                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF-8");
+
+                exchange.sendResponseHeaders(200, html.getBytes().length);
+
+                OutputStream os = exchange.getResponseBody();
+                os.write(html.getBytes());
+                os.close();
+            }
+        });
 
         // Registrator
         server.createContext("/registrator", new HttpHandler() {
